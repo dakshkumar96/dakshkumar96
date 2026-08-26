@@ -10,21 +10,21 @@
     "slug": "sakha",
     "name": "Sakha (Krishna AI)",
     "stack": "Python · FastAPI · FAISS · Next.js · Gemini",
-    "description": "A voice-first companion grounded in the Bhagavad Gita — citation-only verses, a teach-gate before any scripture, crisis-language detection routing straight to real helplines.",
+    "description": "A voice-first companion grounded in the Bhagavad Gita, with citation-only verses, a teach-gate before any scripture, and crisis-language detection routing straight to real helplines.",
     "link": "https://github.com/dakshkumar96/Sakha"
   },
   {
     "slug": "threshold",
     "name": "Threshold",
     "stack": "Python · FastAPI · Next.js · Clerk",
-    "description": "UK visa sponsor analysis — matches live job postings to Skilled Worker sponsors and ranks them by licence stability, verified against government register data.",
+    "description": "UK visa sponsor analysis: matches live job postings to Skilled Worker sponsors and ranks them by licence stability, verified against government register data.",
     "link": "https://github.com/dakshkumar96/Threshold"
   },
   {
     "slug": "reclaim",
     "name": "Reclaim",
     "stack": "React · Flask · PostgreSQL",
-    "description": "Habit-tracking web app with gamified challenges and streak tracking — a JWT-authenticated Flask API behind a React frontend.",
+    "description": "Habit-tracking web app with gamified challenges and streak tracking, a JWT-authenticated Flask API behind a React frontend.",
     "link": "https://github.com/dakshkumar96/Reclaim",
     "live": "https://reclaim-taupe.vercel.app"
   }

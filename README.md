@@ -21,18 +21,30 @@ $ cat about.txt
 ```
 
 Final-year Computer Science student at Royal Holloway, University of London. I build data products and AI
-systems that get used, not just demoed — usually starting from a problem I've actually run into myself.
+systems that get used, not just demoed, usually starting from a problem I've actually run into myself.
 
-- Currently building **[Threshold](https://github.com/dakshkumar96/Threshold)** — UK visa sponsor analysis,
+- Currently building **[Threshold](https://github.com/dakshkumar96/Threshold)**: UK visa sponsor analysis,
   matching live job postings to Skilled Worker sponsors and ranking them by licence stability
-- Also building **[Sakha](https://github.com/dakshkumar96/Sakha)** — a citation-grounded, voice-first
+- Also building **[Sakha](https://github.com/dakshkumar96/Sakha)**, a citation-grounded, voice-first
   companion for the Bhagavad Gita
 - Recently: co-authored **[rv-ml](https://github.com/George-Pulickan/rv-ml)**, applying conformal prediction
   to exoplanet orbital estimation, submitted to AAAI
-- Final year project: Value at Risk — classical vs ML approaches to financial risk, backtested on real market data
+- Final year project: Value at Risk, classical vs ML approaches to financial risk, backtested on real market data
 
+<br/>
 
-## Skill radar — self-rated vs. what I actually ship
+## How I Think
+
+- **Creative before rigorous.** I sketch the shape of a thing before I open an IDE, the same instinct that had me
+  hand-design this profile's terminal aesthetic instead of reaching for a template.
+- **Then I make it hold up.** 150+ LeetCode problems, 50+ Project Euler challenges, 3rd at the District Maths
+  Olympiad, not puzzle-solving for its own sake, but the habit of decomposing a hard problem into steps I can
+  actually verify, which is the same thing as scoping a feature properly.
+- I'd rather ship something smaller that's correct than something bigger I can't explain line by line.
+
+<br/>
+
+## Skill radar: self-rated vs. what I actually ship
 
 <table>
 <tr>
