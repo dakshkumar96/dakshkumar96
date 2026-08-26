@@ -31,13 +31,6 @@ systems that get used, not just demoed — usually starting from a problem I've 
   to exoplanet orbital estimation, submitted to AAAI
 - Final year project: Value at Risk — classical vs ML approaches to financial risk, backtested on real market data
 
-<br/>
-
-## Toolbox
-
-<img src="https://skillicons.dev/icons?i=python,postgres,fastapi,nextjs,react,git,github,vscode,figma&perline=9">
-
-<br/><br/>
 
 ## Skill radar — self-rated vs. what I actually ship
 
