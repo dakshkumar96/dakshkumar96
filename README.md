@@ -2,8 +2,6 @@
 
 # Hi, I'm Daksh
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2600&pause=900&color=3B82F6&center=true&vCenter=true&width=560&lines=Data+%2B+AI%2C+shipped;Final-year+CS%2C+Royal+Holloway" alt="typing banner">
-
 <br/><br/>
 
 <a href="https://linkedin.com/in/dakshkumar96"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
