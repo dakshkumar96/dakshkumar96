@@ -1,21 +1,37 @@
 """
-Generates assets/card-stats-dark.svg and assets/card-stats-light.svg — four
-tiles: total commits, total stars, longest contribution streak, and public
-repo count.
+Generates assets/card-stats-dark.svg and assets/card-stats-light.svg — a
+2x3 grid of stat tiles: total commits, total stars, longest streak, public
+repos, estimated lines of code, and days with a commit.
 
-Total commits / longest streak require walking the contribution calendar
-year by year from account creation (GraphQL only returns ~1 year per call).
+Total commits / longest streak / active days require walking the
+contribution calendar year by year from account creation (GraphQL only
+returns ~1 year per call). Lines of code is an estimate — GitHub's API
+only exposes byte counts per language, not real line counts — using a
+documented bytes-per-line heuristic rather than claiming false precision.
 """
 import datetime as dt
 
 import svgkit
-from gh_api import all_repos, contributions, profile
+from gh_api import all_repos, contributions, language_bytes, profile
+
+BYTES_PER_LINE = 50  # rough average across languages; this is an estimate, labelled as such
+
+SCALE = 1.25
+TILE_W = round(176 * SCALE)
+TILE_H = round(100 * SCALE)
+GAP = round(16 * SCALE)
+OUTER_PAD = round(12 * SCALE)
+VALUE_SIZE = round(26 * SCALE)
+LABEL_SIZE = round(12 * SCALE)
+COLS = 3
 
 TILES = [
-    ("commits", "Total Commits", ""),
-    ("stars", "Total Stars", ""),
-    ("streak", "Longest Streak", " days"),
-    ("repos", "Public Repos", ""),
+    ("commits", "Total Commits", lambda v: f"{v:,}"),
+    ("stars", "Total Stars", lambda v: f"{v:,}"),
+    ("streak", "Longest Streak", lambda v: f"{v} days"),
+    ("repos", "Public Repos", lambda v: f"{v:,}"),
+    ("loc", "Lines of Code (est.)", lambda v: f"~{v:,}"),
+    ("active_days", "Days With a Commit", lambda v: f"{v:,}"),
 ]
 
 
@@ -43,6 +59,7 @@ def compute_stats():
     repos = all_repos()
     total_repos = len([r for r in repos if not r.get("fork")])
     total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+    total_bytes = sum(language_bytes().values())
 
     created_at = profile()["created_at"]
 
@@ -59,22 +76,25 @@ def compute_stats():
         "stars": total_stars,
         "streak": longest_streak(all_days),
         "repos": total_repos,
+        "loc": round(total_bytes / BYTES_PER_LINE),
+        "active_days": len([d for d in all_days if d["contributionCount"] > 0]),
     }
 
 
 def build(p, stats):
-    w, h = 760, 120
-    tile_w, gap = 176, 16
+    rows = -(-len(TILES) // COLS)  # ceil
+    w = OUTER_PAD * 2 + COLS * TILE_W + (COLS - 1) * GAP
+    h = OUTER_PAD * 2 + rows * TILE_H + (rows - 1) * GAP
     svg = [svgkit.svg_open(w, h, p)]
 
-    x = 12
-    for key, label, suffix in TILES:
-        svg.append(svgkit.panel(x, 10, tile_w, h - 20, p))
-        svg.append(
-            svgkit.text(x + tile_w / 2, h / 2 - 6, f"{stats[key]}{suffix}", p, size=26, anchor="middle", color=p["accent"], weight="700")
-        )
-        svg.append(svgkit.text(x + tile_w / 2, h / 2 + 26, label, p, size=12, anchor="middle", color=p["subtext"]))
-        x += tile_w + gap
+    for i, (key, label, fmt) in enumerate(TILES):
+        col, row = i % COLS, i // COLS
+        x = OUTER_PAD + col * (TILE_W + GAP)
+        y = OUTER_PAD + row * (TILE_H + GAP)
+        svg.append(svgkit.panel(x, y, TILE_W, TILE_H, p))
+        cx = x + TILE_W / 2
+        svg.append(svgkit.text(cx, y + TILE_H / 2 - 8, fmt(stats[key]), p, size=VALUE_SIZE, anchor="middle", color=p["accent"], weight="700"))
+        svg.append(svgkit.text(cx, y + TILE_H / 2 + VALUE_SIZE - 10, label, p, size=LABEL_SIZE, anchor="middle", color=p["subtext"]))
 
     svg.append(svgkit.SVG_CLOSE)
     return "".join(svg)

@@ -120,6 +120,6 @@ systems that get used, not just demoed — usually starting from a problem I've 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
-  <img src="assets/card-stats-dark.svg" width="420" alt="stat card">
+  <img src="assets/card-stats-dark.svg" alt="commits, stars, streak, repos, lines of code, days with a commit">
 </picture>
 </div>

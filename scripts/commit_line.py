@@ -90,17 +90,32 @@ def build(p, series):
         f"</path>"
     )
 
-    # point markers: fade + scale in shortly after the line reaches each one
+    # point markers: fade + scale in shortly after the line reaches each one.
+    # A <title> gives a native tooltip, but that only works if the SVG is
+    # viewed directly — an <img>-embedded README strips DOM interactivity,
+    # so the commit count is also drawn as an always-visible small label
+    # (skipped on zero-commit buckets to keep a dense chart readable).
     for i, (x, y) in enumerate(pts):
         t = (i / max(n - 1, 1)) * DRAW_DURATION + 0.05
+        commits = values[i]
+        title = f"{series[i]['date']}: {commits} commit{'s' if commits != 1 else ''}"
         svg.append(
             f'<g transform="translate({x:.1f},{y:.1f})">'
             f'<circle cx="0" cy="0" r="4" fill="{p["accent"]}" stroke="#FFFFFF" stroke-width="1" opacity="0">'
+            f"<title>{title}</title>"
             f'<animate attributeName="opacity" from="0" to="1" begin="{t:.2f}s" dur="0.3s" fill="freeze"/>'
             f'<animateTransform attributeName="transform" type="scale" from="0" to="1" '
             f'begin="{t:.2f}s" dur="0.3s" fill="freeze" additive="sum"/>'
             f"</circle></g>"
         )
+        if commits > 0:
+            label_y = y - 10 if y - 10 > pad_t - 4 else y + 16
+            svg.append(
+                f'<text x="{x:.1f}" y="{label_y:.1f}" text-anchor="middle" fill="{p["subtext"]}" '
+                f'font-size="9" opacity="0">{commits}'
+                f'<animate attributeName="opacity" from="0" to="1" begin="{t:.2f}s" dur="0.3s" fill="freeze"/>'
+                f"</text>"
+            )
 
     label_idxs = sorted(set([0, n // 3, (2 * n) // 3, n - 1]))
     for i in label_idxs:
