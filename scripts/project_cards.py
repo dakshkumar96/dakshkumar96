@@ -1,7 +1,6 @@
 """
-Generates the three project-card SVGs referenced in the README's
-'Featured work' table (assets/card-<slug>-dark.svg / -light.svg), from
-assets/projects.json.
+Generates the project-card SVGs referenced in the README's 'Featured work'
+table (assets/card-<slug>-dark.svg / -light.svg), from assets/projects.json.
 """
 import json
 import textwrap
@@ -14,23 +13,39 @@ def load_projects():
         return json.load(f)
 
 
-def build_card(project, p):
-    w, h = 420, 190
-    svg = [svgkit.svg_open(w, h, p), svgkit.panel(6, 6, w - 12, h - 12, p)]
-    svg.append(f'<rect x="6" y="6" width="6" height="{h - 12}" rx="3" fill="{p["accent"]}"/>')
+WRAP_WIDTH = 52  # chars; tuned so a line never exceeds the 420px card at font-size 12
+MAX_LINES = 6     # hard ceiling so one very long description can't run off the card
+LINE_HEIGHT = 18
+DESC_TOP = 92
+
+
+def wrapped_description(project):
+    return textwrap.wrap(project["description"], width=WRAP_WIDTH)[:MAX_LINES]
+
+
+def build_card(project, p, height):
+    w = 420
+    svg = [svgkit.svg_open(w, height, p), svgkit.panel(6, 6, w - 12, height - 12, p)]
+    svg.append(f'<rect x="6" y="6" width="6" height="{height - 12}" rx="3" fill="{p["accent"]}"/>')
     svg.append(svgkit.text(30, 40, project["name"], p, size=18, weight="700"))
     svg.append(svgkit.text(30, 62, project["stack"], p, size=11, color=p["accent"]))
-    for i, line in enumerate(textwrap.wrap(project["description"], width=52)[:4]):
-        svg.append(svgkit.text(30, 92 + i * 18, line, p, size=12, color=p["subtext"]))
+    for i, line in enumerate(wrapped_description(project)):
+        svg.append(svgkit.text(30, DESC_TOP + i * LINE_HEIGHT, line, p, size=12, color=p["subtext"]))
     svg.append(svgkit.SVG_CLOSE)
     return "".join(svg)
 
 
 def render():
-    for project in load_projects():
+    projects = load_projects()
+    # every card gets the same height (tallest description's line count),
+    # so the README's 2x2 grid doesn't end up with mismatched row heights
+    max_lines = max(len(wrapped_description(proj)) for proj in projects)
+    height = DESC_TOP + max_lines * LINE_HEIGHT + 20
+
+    for project in projects:
         slug = project["slug"]
         svgkit.render_pair(
-            lambda p, proj=project: build_card(proj, p),
+            lambda p, proj=project: build_card(proj, p, height),
             f"assets/card-{slug}-dark.svg",
             f"assets/card-{slug}-light.svg",
         )

@@ -40,7 +40,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_USER: dakshkumar96
         run: |
-          python scripts/portrait.py
           python scripts/radar.py
           python scripts/radar_langs.py
           python scripts/metrics.py

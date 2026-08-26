@@ -1,14 +1,8 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/portrait.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/portrait.svg">
-  <img src="assets/portrait.svg" width="220" alt="Daksh Kumar">
-</picture>
+# Hi, I'm Daksh
 
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2600&pause=900&color=3B82F6&center=true&vCenter=true&width=560&lines=Daksh+Kumar;Data+%2B+AI%2C+shipped;Final-year+CS%2C+Royal+Holloway" alt="typing banner">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2600&pause=900&color=3B82F6&center=true&vCenter=true&width=560&lines=Data+%2B+AI%2C+shipped;Final-year+CS%2C+Royal+Holloway" alt="typing banner">
 
 <br/><br/>
 
@@ -28,15 +22,15 @@
 $ cat about.txt
 ```
 
-Hi, I'm **Daksh**. Final-year Computer Science student at Royal Holloway, University of London. I build data
-products and AI systems that get used, not just demoed — usually starting from a problem I've actually run into
-myself.
+Final-year Computer Science student at Royal Holloway, University of London. I build data products and AI
+systems that get used, not just demoed — usually starting from a problem I've actually run into myself.
 
-- Currently building **[Sponsor Signal](https://github.com/dakshkumar96/sponsor-signal)** — UK visa sponsorship
-  analysis, backed by survival modelling on 133,979 licensed sponsors
-- Also building **[Krishna AI](https://github.com/dakshkumar96/krishna-ai)** — a citation-grounded RAG
+- Currently building **[Threshold](https://github.com/dakshkumar96/Threshold)** — UK visa sponsor analysis,
+  matching live job postings to Skilled Worker sponsors and ranking them by licence stability
+- Also building **[Sakha](https://github.com/dakshkumar96/Sakha)** — a citation-grounded, voice-first
   companion for the Bhagavad Gita
-- Recently: co-authored research applying conformal prediction to exoplanet orbital estimation, submitted to AAAI
+- Recently: co-authored **[rv-ml](https://github.com/George-Pulickan/rv-ml)**, applying conformal prediction
+  to exoplanet orbital estimation, submitted to AAAI
 - Final year project: Value at Risk — classical vs ML approaches to financial risk, backtested on real market data
 
 <br/>
@@ -77,45 +71,52 @@ myself.
 <table>
 <tr>
 <td width="50%">
-<a href="https://github.com/dakshkumar96/sponsor-signal">
+<a href="https://github.com/George-Pulickan/rv-ml">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-sponsor-signal-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-sponsor-signal-light.svg">
-  <img src="assets/card-sponsor-signal-dark.svg" width="420" alt="Sponsor Signal">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-rv-ml-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-rv-ml-light.svg">
+  <img src="assets/card-rv-ml-dark.svg" width="420" alt="rv-ml">
 </picture>
 </a>
 </td>
 <td width="50%">
-<a href="https://github.com/dakshkumar96/krishna-ai">
+<a href="https://github.com/dakshkumar96/Sakha">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-krishna-ai-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-krishna-ai-light.svg">
-  <img src="assets/card-krishna-ai-dark.svg" width="420" alt="Krishna AI">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-sakha-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-sakha-light.svg">
+  <img src="assets/card-sakha-dark.svg" width="420" alt="Sakha (Krishna AI)">
 </picture>
 </a>
 </td>
 </tr>
 <tr>
 <td width="50%">
-<a href="https://github.com/dakshkumar96/exoplanet-conformal-prediction">
+<a href="https://github.com/dakshkumar96/Threshold">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-exoplanet-conformal-prediction-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-exoplanet-conformal-prediction-light.svg">
-  <img src="assets/card-exoplanet-conformal-prediction-dark.svg" width="420" alt="Exoplanet Orbital Parameter Estimation">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-threshold-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-threshold-light.svg">
+  <img src="assets/card-threshold-dark.svg" width="420" alt="Threshold">
 </picture>
 </a>
 </td>
 <td width="50%">
-<!-- fourth project slot — VaR repo once it exists, or leave this cell empty -->
+<a href="https://github.com/dakshkumar96/Reclaim">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-reclaim-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-reclaim-light.svg">
+  <img src="assets/card-reclaim-dark.svg" width="420" alt="Reclaim">
+</picture>
+</a>
 </td>
 </tr>
 </table>
 
 <sub>
 
-**Sponsor Signal** — Python, FastAPI, Next.js, SQL · [live](https://your-deployed-url.vercel.app) · [repo](https://github.com/dakshkumar96/sponsor-signal)
-**Krishna AI** — Python, FAISS, Groq, Next.js · [repo](https://github.com/dakshkumar96/krishna-ai)
-**Exoplanet Orbital Parameter Estimation** — Python, conformal prediction · [repo](https://github.com/dakshkumar96/exoplanet-conformal-prediction)
+**rv-ml** — Python, conformal prediction · [repo](https://github.com/George-Pulickan/rv-ml)
+**Sakha (Krishna AI)** — Python, FastAPI, FAISS, Next.js, Gemini · [repo](https://github.com/dakshkumar96/Sakha)
+**Threshold** — Python, FastAPI, Next.js, Clerk · [repo](https://github.com/dakshkumar96/Threshold)
+**Reclaim** — React, Flask, PostgreSQL · [live](https://reclaim-taupe.vercel.app) · [repo](https://github.com/dakshkumar96/Reclaim)
 
 </sub>
 
@@ -124,21 +125,9 @@ myself.
 ## Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics.dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/metrics.light.svg">
-  <img src="assets/metrics.dark.svg" alt="contribution metrics">
-</picture>
-
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commit-line-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/commit-line-light.svg">
   <img src="assets/commit-line-dark.svg" alt="commit activity over time">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dakshkumar96/dakshkumar96/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dakshkumar96/dakshkumar96/output/snake-light.svg">
-  <img src="https://raw.githubusercontent.com/dakshkumar96/dakshkumar96/output/snake-dark.svg" alt="snake eating the contribution graph, drawn in the site's blue palette">
 </picture>
 
 <br/>

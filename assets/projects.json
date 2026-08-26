@@ -1,23 +1,31 @@
 [
   {
-    "slug": "sponsor-signal",
-    "name": "Sponsor Signal",
-    "stack": "Python · FastAPI · Next.js · SQL",
-    "description": "UK visa sponsorship analysis backed by survival modelling on 133,979 licensed sponsors — estimating sponsor reliability and time-to-attrition risk.",
-    "link": "https://github.com/dakshkumar96/sponsor-signal"
+    "slug": "rv-ml",
+    "name": "rv-ml",
+    "stack": "Python · Conformal Prediction · Simulation-Based ML",
+    "description": "Predicting Keplerian orbital parameters from radial-velocity time series, with conformal prediction intervals calibrated on synthetic data that stay valid on real stars. Co-authored UROP work, submitted to AAAI.",
+    "link": "https://github.com/George-Pulickan/rv-ml"
   },
   {
-    "slug": "krishna-ai",
-    "name": "Krishna AI",
-    "stack": "Python · FAISS · Groq · Next.js",
-    "description": "A citation-grounded RAG companion for the Bhagavad Gita — every answer traceable back to verse and chapter, no hallucinated scripture.",
-    "link": "https://github.com/dakshkumar96/krishna-ai"
+    "slug": "sakha",
+    "name": "Sakha (Krishna AI)",
+    "stack": "Python · FastAPI · FAISS · Next.js · Gemini",
+    "description": "A voice-first companion grounded in the Bhagavad Gita — citation-only verses, a teach-gate before any scripture, crisis-language detection routing straight to real helplines.",
+    "link": "https://github.com/dakshkumar96/Sakha"
   },
   {
-    "slug": "exoplanet-conformal-prediction",
-    "name": "Exoplanet Orbital Parameter Estimation",
-    "stack": "Python · NumPy · Gaussian Processes · Conformal Prediction",
-    "description": "UROP research at Royal Holloway — simulation-based ML for exoplanet orbital parameters from radial velocity data, with conformal prediction for uncertainty guarantees. Co-authored work submitted to AAAI.",
-    "link": "https://github.com/dakshkumar96/exoplanet-conformal-prediction"
+    "slug": "threshold",
+    "name": "Threshold",
+    "stack": "Python · FastAPI · Next.js · Clerk",
+    "description": "UK visa sponsor analysis — matches live job postings to Skilled Worker sponsors and ranks them by licence stability, verified against government register data.",
+    "link": "https://github.com/dakshkumar96/Threshold"
+  },
+  {
+    "slug": "reclaim",
+    "name": "Reclaim",
+    "stack": "React · Flask · PostgreSQL",
+    "description": "Habit-tracking web app with gamified challenges and streak tracking — a JWT-authenticated Flask API behind a React frontend.",
+    "link": "https://github.com/dakshkumar96/Reclaim",
+    "live": "https://reclaim-taupe.vercel.app"
   }
 ]
