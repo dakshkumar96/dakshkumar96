@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "sponsor-signal",
+    "name": "Sponsor Signal",
+    "stack": "Python · FastAPI · Next.js · SQL",
+    "description": "UK visa sponsorship analysis backed by survival modelling on 133,979 licensed sponsors — estimating sponsor reliability and time-to-attrition risk.",
+    "link": "https://github.com/dakshkumar96/sponsor-signal"
+  },
+  {
+    "slug": "krishna-ai",
+    "name": "Krishna AI",
+    "stack": "Python · FAISS · Groq · Next.js",
+    "description": "A citation-grounded RAG companion for the Bhagavad Gita — every answer traceable back to verse and chapter, no hallucinated scripture.",
+    "link": "https://github.com/dakshkumar96/krishna-ai"
+  },
+  {
+    "slug": "exoplanet-conformal-prediction",
+    "name": "Exoplanet Orbital Parameter Estimation",
+    "stack": "Python · NumPy · Gaussian Processes · Conformal Prediction",
+    "description": "UROP research at Royal Holloway — simulation-based ML for exoplanet orbital parameters from radial velocity data, with conformal prediction for uncertainty guarantees. Co-authored work submitted to AAAI.",
+    "link": "https://github.com/dakshkumar96/exoplanet-conformal-prediction"
+  }
+]
