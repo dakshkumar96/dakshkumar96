@@ -22,9 +22,11 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: dakshkumar96
+          # custom blue palette instead of the built-in github-dark/github-light
+          # presets, which render the contribution grid in GitHub's green
           outputs: |
-            dist/snake-dark.svg?palette=github-dark
-            dist/snake-light.svg?palette=github-light
+            dist/snake-dark.svg?color_snake=#3b82f6&color_dots=#161b22,#1e3a5f,#1d4ed8,#2563eb,#3b82f6
+            dist/snake-light.svg?color_snake=#1d4ed8&color_dots=#ebedf0,#93c5fd,#60a5fa,#3b82f6,#1d4ed8
 
       - uses: actions/setup-python@v5
         with:
@@ -42,6 +44,7 @@ jobs:
           python scripts/radar.py
           python scripts/radar_langs.py
           python scripts/metrics.py
+          python scripts/commit_line.py
           python scripts/card_stats.py
           python scripts/project_cards.py
 

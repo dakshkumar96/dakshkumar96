@@ -130,9 +130,15 @@ myself.
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/commit-line-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/commit-line-light.svg">
+  <img src="assets/commit-line-dark.svg" alt="commit activity over time">
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dakshkumar96/dakshkumar96/output/snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dakshkumar96/dakshkumar96/output/snake-light.svg">
-  <img src="https://raw.githubusercontent.com/dakshkumar96/dakshkumar96/output/snake-dark.svg" alt="snake eating the contribution graph">
+  <img src="https://raw.githubusercontent.com/dakshkumar96/dakshkumar96/output/snake-dark.svg" alt="snake eating the contribution graph, drawn in the site's blue palette">
 </picture>
 
 <br/>
