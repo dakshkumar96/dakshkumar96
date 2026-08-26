@@ -57,6 +57,41 @@ def text(x, y, s, p, size=12, anchor="start", color=None, weight=None):
     return f'<text x="{x}" y="{y}" text-anchor="{anchor}" fill="{fill}" font-size="{size}"{fw}>{s}</text>'
 
 
+def wrap_label(label, max_chars=18, max_lines=2):
+    """Greedy word-wrap for axis/legend labels, so a long label (e.g.
+    'Statistics / Survival Analysis') breaks into short stacked lines
+    instead of running off the edge of the canvas as one long string."""
+    if len(label) <= max_chars:
+        return [label]
+    words = label.split()
+    lines, cur = [], ""
+    for word in words:
+        if len(lines) >= max_lines - 1:
+            # already on the last allowed line — keep appending rather than
+            # drop words, even if it runs a little long
+            cur = f"{cur} {word}".strip()
+            continue
+        candidate = f"{cur} {word}".strip()
+        if len(candidate) <= max_chars or not cur:
+            cur = candidate
+        else:
+            lines.append(cur)
+            cur = word
+    lines.append(cur)
+    return lines
+
+
+def text_lines(x, y, lines, p, size=11, anchor="middle", color=None, line_height=13):
+    """Stack of <text> elements, top line at y. Returns (svg, bottom_y) so
+    callers can position what comes next (e.g. a value label) below it."""
+    fill = color or p["subtext"]
+    parts = []
+    for i, line in enumerate(lines):
+        parts.append(f'<text x="{x}" y="{y + i * line_height}" text-anchor="{anchor}" fill="{fill}" font-size="{size}">{line}</text>')
+    bottom_y = y + (len(lines) - 1) * line_height
+    return "".join(parts), bottom_y
+
+
 def render_pair(build_fn, dark_path, light_path):
     """Call build_fn(palette) for both themes and write the two files."""
     with open(dark_path, "w", encoding="utf-8") as f:

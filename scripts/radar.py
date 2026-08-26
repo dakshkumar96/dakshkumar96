@@ -7,7 +7,9 @@ import math
 
 import svgkit
 
-RADIUS = 120
+RADIUS = 105
+LABEL_GAP = 26
+LABEL_MAX_CHARS = 16
 
 
 def load_skills():
@@ -49,21 +51,26 @@ def draw(cx, cy, r, labels, values, p, value_labels=None):
 
     for i, label in enumerate(labels):
         angle = -math.pi / 2 + i * (2 * math.pi / n)
-        lx, ly = cx + (r + 32) * math.cos(angle), cy + (r + 32) * math.sin(angle)
+        lx, ly = cx + (r + LABEL_GAP) * math.cos(angle), cy + (r + LABEL_GAP) * math.sin(angle)
         anchor = "middle"
         if math.cos(angle) > 0.3:
             anchor = "start"
         elif math.cos(angle) < -0.3:
             anchor = "end"
-        parts.append(svgkit.text(lx, ly, label, p, size=11, anchor=anchor, color=p["subtext"]))
+        lines = svgkit.wrap_label(label, max_chars=LABEL_MAX_CHARS)
+        # vertically centre a multi-line label on its anchor point instead
+        # of always growing downward, so it doesn't drift into the next axis
+        start_y = ly - (len(lines) - 1) * 6.5
+        label_svg, bottom_y = svgkit.text_lines(lx, start_y, lines, p, size=11, anchor=anchor, color=p["subtext"], line_height=13)
+        parts.append(label_svg)
         if value_labels is not None:
-            parts.append(svgkit.text(lx, ly + 14, f"{value_labels[i]:.1f}", p, size=10, anchor=anchor))
+            parts.append(svgkit.text(lx, bottom_y + 14, f"{value_labels[i]:.1f}", p, size=10, anchor=anchor))
     return "".join(parts)
 
 
 def build(p):
     skills = load_skills()
-    w, h = 420, 400
+    w, h = 560, 460
     svg = [svgkit.svg_open(w, h, p), svgkit.panel(10, 10, w - 20, h - 20, p)]
     svg.append(draw(w / 2, h / 2 + 6, RADIUS, list(skills.keys()), list(skills.values()), p))
     svg.append(svgkit.SVG_CLOSE)
