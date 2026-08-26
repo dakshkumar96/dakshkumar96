@@ -102,14 +102,7 @@ systems that get used, not just demoed — usually starting from a problem I've 
 </tr>
 </table>
 
-<sub>
 
-**rv-ml** — Python, conformal prediction · [repo](https://github.com/George-Pulickan/rv-ml)
-**Sakha (Krishna AI)** — Python, FastAPI, FAISS, Next.js, Gemini · [repo](https://github.com/dakshkumar96/Sakha)
-**Threshold** — Python, FastAPI, Next.js, Clerk · [repo](https://github.com/dakshkumar96/Threshold)
-**Reclaim** — React, Flask, PostgreSQL · [live](https://reclaim-taupe.vercel.app) · [repo](https://github.com/dakshkumar96/Reclaim)
-
-</sub>
 
 <br/>
 
