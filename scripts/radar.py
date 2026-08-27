@@ -70,7 +70,7 @@ def draw(cx, cy, r, labels, values, p, value_labels=None):
 
 def build(p):
     skills = load_skills()
-    w, h = 560, 460
+    w, h = 520, 380
     svg = [svgkit.svg_open(w, h, p), svgkit.panel(10, 10, w - 20, h - 20, p)]
     svg.append(draw(w / 2, h / 2 + 6, RADIUS, list(skills.keys()), list(skills.values()), p))
     svg.append(svgkit.SVG_CLOSE)
