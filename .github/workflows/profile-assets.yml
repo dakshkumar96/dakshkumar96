@@ -22,11 +22,12 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: dakshkumar96
-          # custom blue palette instead of the built-in github-dark/github-light
-          # presets, which render the contribution grid in GitHub's green
+          # custom Claude-orange palette instead of the built-in github-dark/
+          # github-light presets, which render the contribution grid in
+          # GitHub's green
           outputs: |
-            dist/snake-dark.svg?color_snake=#3b82f6&color_dots=#161b22,#1e3a5f,#1d4ed8,#2563eb,#3b82f6
-            dist/snake-light.svg?color_snake=#1d4ed8&color_dots=#ebedf0,#93c5fd,#60a5fa,#3b82f6,#1d4ed8
+            dist/snake-dark.svg?color_snake=#da7756&color_dots=#161b22,#5a3324,#9c4f30,#c2643f,#da7756
+            dist/snake-light.svg?color_snake=#bd5d3a&color_dots=#ebedf0,#f0a882,#e58f60,#da7756,#bd5d3a
 
       - uses: actions/setup-python@v5
         with:
@@ -40,11 +41,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_USER: dakshkumar96
         run: |
+          python scripts/hero.py
           python scripts/radar.py
           python scripts/radar_langs.py
-          python scripts/metrics.py
           python scripts/commit_line.py
           python scripts/card_stats.py
+          python scripts/numbers.py
           python scripts/project_cards.py
 
       - name: Commit generated assets back to main

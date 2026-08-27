@@ -7,8 +7,8 @@ import math
 
 import svgkit
 
-RADIUS = 105
-LABEL_GAP = 26
+RADIUS = 115.5  # 105 * 1.1
+LABEL_GAP = 28.6  # 26 * 1.1
 LABEL_MAX_CHARS = 16
 
 
@@ -45,7 +45,7 @@ def draw(cx, cy, r, labels, values, p, value_labels=None):
     max_v = max(values) if values else 1
     pts = polygon_points(cx, cy, r, values, max_v)
     d = "M " + " L ".join(f"{x:.1f},{y:.1f}" for x, y in pts) + " Z"
-    parts.append(f'<path d="{d}" fill="{p["accent"]}" fill-opacity="0.18" stroke="{p["accent"]}" stroke-width="2"/>')
+    parts.append(f'<path d="{d}" fill="{p["accent"]}" fill-opacity="0.18" stroke="{p["accent"]}" stroke-width="2" filter="url(#glow)"/>')
     for x, y in pts:
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="{p["accent"]}" stroke="{p["panel"]}" stroke-width="1"/>')
 
@@ -70,9 +70,9 @@ def draw(cx, cy, r, labels, values, p, value_labels=None):
 
 def build(p):
     skills = load_skills()
-    w, h = 520, 380
-    svg = [svgkit.svg_open(w, h, p), svgkit.panel(10, 10, w - 20, h - 20, p)]
-    svg.append(draw(w / 2, h / 2 + 6, RADIUS, list(skills.keys()), list(skills.values()), p))
+    w, h = 572, 418  # 520 * 1.1, 380 * 1.1
+    svg = [svgkit.svg_open(w, h, p), svgkit.panel(11, 11, w - 22, h - 22, p)]
+    svg.append(draw(w / 2, h / 2 + 7, RADIUS, list(skills.keys()), list(skills.values()), p))
     svg.append(svgkit.SVG_CLOSE)
     return "".join(svg)
 

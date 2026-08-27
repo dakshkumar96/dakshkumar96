@@ -1,6 +1,10 @@
 <div align="left">
 
-# Hi, I'm Daksh
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+  <img src="assets/hero-dark.svg" alt="Hi, I'm Daksh">
+</picture>
 
 <br/>
 
@@ -88,7 +92,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
-  <img src="assets/radar-dark.svg" width="380" alt="self-rated skill radar">
+  <img src="assets/radar-dark.svg" width="418" alt="self-rated skill radar">
 </picture>
 <br/><sub>self-rated</sub>
 </td>
@@ -96,7 +100,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
-  <img src="assets/radar-langs-dark.svg" width="380" alt="language radar from real repos">
+  <img src="assets/radar-langs-dark.svg" width="418" alt="language radar from real repos">
 </picture>
 <br/><sub>from real bytes in my repos</sub>
 </td>
@@ -166,4 +170,16 @@ systems that get used, not just demoed, usually starting from a problem I've act
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
   <img src="assets/card-stats-dark.svg" width="760" alt="total commits, public repos, days with a commit, profile views">
+</picture>
+
+<br/>
+
+## `~/` languages
+
+<sub>live from the GitHub API</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/numbers-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/numbers-light.svg">
+  <img src="assets/numbers-dark.svg" width="620" alt="most used languages by bytes, across all non-fork repos">
 </picture>

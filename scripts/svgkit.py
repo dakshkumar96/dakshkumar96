@@ -5,7 +5,7 @@ generated asset in assets/ must use. The README switches images via
 a real dark AND light render — this is the one place that pairing lives,
 so nothing drifts to a different look than the rest.
 
-Theme: ASCII terminal, dark background, red accent, Courier monospace.
+Theme: ASCII terminal, dark background, Claude-orange accent, Courier monospace.
 Because every script pulls its palette/font from here instead of hardcoding
 values, this file is the single place a full re-theme happens.
 """
@@ -18,9 +18,9 @@ PALETTES = {
         panel="#161B22",
         border="#30363D",
         grid="#30363D",
-        accent="#3B82F6",
-        accent_dim="#1E40AF",
-        accent_light="#93C5FD",
+        accent="#DA7756",       # Claude orange
+        accent_dim="#BD5D3A",
+        accent_light="#F0A882",
         text="#F0F6FC",
         subtext="#8B949E",
     ),
@@ -29,9 +29,9 @@ PALETTES = {
         panel="#F6F8FA",
         border="#D0D7DE",
         grid="#D0D7DE",
-        accent="#3B82F6",
-        accent_dim="#1E40AF",
-        accent_light="#93C5FD",
+        accent="#DA7756",       # Claude orange
+        accent_dim="#BD5D3A",
+        accent_light="#F0A882",
         text="#1F2328",
         subtext="#57606A",
     ),
