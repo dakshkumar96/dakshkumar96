@@ -75,7 +75,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
-  <img src="assets/radar-dark.svg" width="418" alt="self-rated skill radar">
+  <img src="assets/radar-dark.svg" width="100%" alt="self-rated skill radar">
 </picture>
 <br/><sub>self-rated</sub>
 </td>
@@ -83,7 +83,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
-  <img src="assets/radar-langs-dark.svg" width="418" alt="language radar from real repos">
+  <img src="assets/radar-langs-dark.svg" width="100%" alt="language radar from real repos">
 </picture>
 <br/><sub>from real bytes in my repos</sub>
 </td>
@@ -101,7 +101,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-rv-ml-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-rv-ml-light.svg">
-  <img src="assets/card-rv-ml-dark.svg" width="420" alt="rv-ml">
+  <img src="assets/card-rv-ml-dark.svg" width="100%" alt="rv-ml">
 </picture>
 </a>
 </td>
@@ -110,7 +110,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-sakha-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-sakha-light.svg">
-  <img src="assets/card-sakha-dark.svg" width="420" alt="Sakha (Krishna AI)">
+  <img src="assets/card-sakha-dark.svg" width="100%" alt="Sakha (Krishna AI)">
 </picture>
 </a>
 </td>
@@ -121,7 +121,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-threshold-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-threshold-light.svg">
-  <img src="assets/card-threshold-dark.svg" width="420" alt="Threshold">
+  <img src="assets/card-threshold-dark.svg" width="100%" alt="Threshold">
 </picture>
 </a>
 </td>
@@ -130,7 +130,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-reclaim-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-reclaim-light.svg">
-  <img src="assets/card-reclaim-dark.svg" width="420" alt="Reclaim">
+  <img src="assets/card-reclaim-dark.svg" width="100%" alt="Reclaim">
 </picture>
 </a>
 </td>
@@ -144,7 +144,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commit-line-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/commit-line-light.svg">
-  <img src="assets/commit-line-dark.svg" width="760" alt="commit activity over time">
+  <img src="assets/commit-line-dark.svg" width="100%" alt="commit activity over time">
 </picture>
 
 <br/>
@@ -152,7 +152,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
-  <img src="assets/card-stats-dark.svg" width="760" alt="total commits, public repos, days with a commit, profile views">
+  <img src="assets/card-stats-dark.svg" width="100%" alt="total commits, public repos, days with a commit, profile views">
 </picture>
 
 <br/>
@@ -164,5 +164,5 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/numbers-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/numbers-light.svg">
-  <img src="assets/numbers-dark.svg" width="620" alt="most used languages by bytes, across all non-fork repos">
+  <img src="assets/numbers-dark.svg" width="100%" alt="most used languages by bytes, across all non-fork repos">
 </picture>
