@@ -5,11 +5,13 @@ generated asset in assets/ must use. The README switches images via
 a real dark AND light render — this is the one place that pairing lives,
 so nothing drifts to a different look than the rest.
 
-Theme: ASCII terminal, dark background, phosphor-green accent, Courier
-monospace. Accent matches the portfolio website's own #4af626, so the two
-properties read as one identity instead of two different color schemes.
-Because every script pulls its palette/font from here instead of hardcoding
-values, this file is the single place a full re-theme happens.
+Theme: ASCII terminal, dark background, GitHub's own green accent, Courier
+monospace. Real Primer green tokens (GitHub's actual design system) —
+dark and light each get their own shade, same as GitHub's own UI does,
+rather than one compromise value that's too dim on one background or too
+loud on the other. Because every script pulls its palette/font from here
+instead of hardcoding values, this file is the single place a full
+re-theme happens.
 """
 
 FONT_MONO = "'Courier New', Courier, monospace"
@@ -20,9 +22,9 @@ PALETTES = {
         panel="#161B22",
         border="#30363D",
         grid="#30363D",
-        accent="#4AF626",       # phosphor green
-        accent_dim="#37B81C",
-        accent_light="#92FA7D",
+        accent="#3FB950",       # GitHub Primer green.4 (dark mode)
+        accent_dim="#238636",   # Primer green.6
+        accent_light="#7EE787", # Primer green.2
         text="#F0F6FC",
         subtext="#8B949E",
     ),
@@ -31,9 +33,9 @@ PALETTES = {
         panel="#F6F8FA",
         border="#D0D7DE",
         grid="#D0D7DE",
-        accent="#4AF626",       # phosphor green
-        accent_dim="#37B81C",
-        accent_light="#92FA7D",
+        accent="#1A7F37",       # GitHub Primer green.6 (light mode)
+        accent_dim="#116329",   # Primer green.8
+        accent_light="#4AC26B", # Primer green.3
         text="#1F2328",
         subtext="#57606A",
     ),

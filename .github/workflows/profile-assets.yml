@@ -32,12 +32,13 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: dakshkumar96
-          # custom palette instead of the built-in github-dark/github-light
-          # presets — this is our own phosphor green (#4af626, matching
-          # svgkit.py), not GitHub's own (different, more muted) green
+          # custom palette (not snk's built-in github-dark/github-light —
+          # unverified param syntax isn't worth risking on a working CI
+          # step) built from the exact same Primer green tokens as
+          # svgkit.py, so the snake matches the rest of the page
           outputs: |
-            dist/snake-dark.svg?color_snake=#4af626&color_dots=#161b22,#235223,#308924,#3dbf25,#4af626
-            dist/snake-light.svg?color_snake=#37b81c&color_dots=#ebedf0,#92fa7d,#6ef852,#4af626,#37b81c
+            dist/snake-dark.svg?color_snake=#3fb950&color_dots=#161b22,#20432e,#2b6a39,#359245,#3fb950
+            dist/snake-light.svg?color_snake=#116329&color_dots=#ebedf0,#4ac26b,#32a151,#1a7f37,#116329
 
       - uses: actions/setup-python@v5
         with:
