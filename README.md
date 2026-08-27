@@ -7,9 +7,6 @@
 <a href="https://linkedin.com/in/dakshkumar96"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
 <a href="mailto:dakshkumar2k2@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 <a href="https://marketing-portfolio-beta.vercel.app"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
-
-<img src="https://komarev.com/ghpvc/?username=dakshkumar96&color=3B82F6&label=profile+views&style=for-the-badge" alt="profile views">
-
 </div>
 
 <br/>
