@@ -32,12 +32,12 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: dakshkumar96
-          # custom Claude-orange palette instead of the built-in github-dark/
-          # github-light presets, which render the contribution grid in
-          # GitHub's green
+          # custom palette instead of the built-in github-dark/github-light
+          # presets — this is our own phosphor green (#4af626, matching
+          # svgkit.py), not GitHub's own (different, more muted) green
           outputs: |
-            dist/snake-dark.svg?color_snake=#da7756&color_dots=#161b22,#5a3324,#9c4f30,#c2643f,#da7756
-            dist/snake-light.svg?color_snake=#bd5d3a&color_dots=#ebedf0,#f0a882,#e58f60,#da7756,#bd5d3a
+            dist/snake-dark.svg?color_snake=#4af626&color_dots=#161b22,#235223,#308924,#3dbf25,#4af626
+            dist/snake-light.svg?color_snake=#37b81c&color_dots=#ebedf0,#92fa7d,#6ef852,#4af626,#37b81c
 
       - uses: actions/setup-python@v5
         with:
