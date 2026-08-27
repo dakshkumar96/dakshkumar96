@@ -28,8 +28,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
   to exoplanet orbital estimation, submitted to AAAI
 - Final year project: Value at Risk, classical vs ML approaches to financial risk, backtested on real market data
 
-<h2 data-importer="text" align="left">Toolbox</h2>
-
+## `~/` about me 
 ###
 
 <div data-importer="techs" align="left">
