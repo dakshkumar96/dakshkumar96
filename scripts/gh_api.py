@@ -101,7 +101,10 @@ def profile_views(user=None):
     return int(m.group(1)) if m else 0
 
 
-_COMMITS_CACHE = os.path.join("dist", ".public_commits_cache.json")
+_COMMITS_CACHE = os.path.join(".cache", "public_commits.json")
+# deliberately NOT under dist/ — the snake-animation Docker action (Platane/snk)
+# creates dist/ as root inside its container, and the runner user can't write
+# into it afterward; this caused a real PermissionError in CI
 
 
 def _search_commits_page(user, page, retries=3):
