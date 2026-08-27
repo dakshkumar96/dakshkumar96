@@ -70,20 +70,22 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <table>
 <tr>
 <td width="50%" align="center">
+  <br/><h2>How I See Myself</h2>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
   <img src="assets/radar-dark.svg" width="100%" alt="self-rated skill radar">
 </picture>
-<br/><h2>How I See Myself</h2>
+
 </td>
 <td width="50%" align="center">
+  <br/><h2>What I actually ship</h2>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
   <img src="assets/radar-langs-dark.svg" width="100%" alt="language radar from real repos">
 </picture>
-<br/><h2>What I actually ship</h2>
+
 </td>
 </tr>
 </table>
