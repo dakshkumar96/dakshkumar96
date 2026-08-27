@@ -74,7 +74,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <tr>
 <td width="50%" align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
   <img src="assets/radar-dark.svg" width="418" alt="self-rated skill radar">
 </picture>
@@ -82,7 +82,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 </td>
 <td width="50%" align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
   <img src="assets/radar-langs-dark.svg" width="418" alt="language radar from real repos">
 </picture>
