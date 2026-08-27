@@ -10,6 +10,16 @@ on:
 permissions:
   contents: write
 
+# Queue runs on main instead of letting them overlap. Without this, two
+# pushes close together (e.g. two quick manual README edits) each start
+# their own run, and whichever run's final "git push" loses the race gets
+# rejected outright — no retry, job just fails. cancel-in-progress stays
+# false so a run that's already mid-regeneration finishes and commits
+# instead of being cut off.
+concurrency:
+  group: profile-assets-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -55,7 +65,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/
           git diff --cached --quiet || git commit -m "chore: regenerate profile assets [skip ci]"
-          git push
+          # concurrency: above serializes runs so this should always be a
+          # fast-forward, but rebase-and-retry once anyway in case a human
+          # push landed on main in the moment between checkout and here
+          git push || (git pull --rebase origin main && git push)
 
       - name: Publish snake animation to output branch
         uses: crazy-max/ghaction-github-pages@v4
