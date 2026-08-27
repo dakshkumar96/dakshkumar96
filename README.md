@@ -11,7 +11,7 @@
 
 <br/>
 
-## `~/` whoami
+## `~/` about me 
 
 ```console
 $ cat about.txt
