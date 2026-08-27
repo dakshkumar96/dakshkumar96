@@ -28,18 +28,6 @@ systems that get used, not just demoed, usually starting from a problem I've act
   to exoplanet orbital estimation, submitted to AAAI
 - Final year project: Value at Risk, classical vs ML approaches to financial risk, backtested on real market data
 
-<br/>
-
-## `~/` how-i-think
-
-- **Creative before rigorous.** I sketch the shape of a thing before I open an IDE, the same instinct that had me
-  hand-design this profile's terminal aesthetic instead of reaching for a template.
-- **Then I make it hold up.** 150+ LeetCode problems, 50+ Project Euler challenges, 3rd at the District Maths
-  Olympiad, not puzzle-solving for its own sake, but the habit of decomposing a hard problem into steps I can
-  actually verify, which is the same thing as scoping a feature properly.
-- I'd rather ship something smaller that's correct than something bigger I can't explain line by line.
-
-<br/>
 <h2 data-importer="text" align="left">Toolbox</h2>
 
 ###
