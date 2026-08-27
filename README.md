@@ -8,7 +8,7 @@
 <a href="mailto:dakshkumar2k2@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 <a href="https://marketing-portfolio-beta.vercel.app"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
 
-<img src="https://komarev.com/ghpvc/?username=dakshkumar96&color=3B82F6&label=profile+views" alt="profile views">
+<img src="https://komarev.com/ghpvc/?username=dakshkumar96&color=3B82F6&label=profile+views&style=for-the-badge" alt="profile views">
 
 </div>
 
@@ -33,7 +33,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 
 <br/>
 
-## How I Think
+## `~/` how-i-think
 
 - **Creative before rigorous.** I sketch the shape of a thing before I open an IDE, the same instinct that had me
   hand-design this profile's terminal aesthetic instead of reaching for a template.
@@ -44,7 +44,9 @@ systems that get used, not just demoed, usually starting from a problem I've act
 
 <br/>
 
-## Skill radar: self-rated vs. what I actually ship
+## `~/` skill-radar
+
+<sub>self-rated vs. what I actually ship</sub>
 
 <table>
 <tr>
@@ -69,7 +71,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 
 <br/>
 
-## Featured work
+## `~/` featured-work
 
 <table>
 <tr>
@@ -114,11 +116,9 @@ systems that get used, not just demoed, usually starting from a problem I've act
 </tr>
 </table>
 
-
-
 <br/>
 
-## Activity
+## `~/` activity
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commit-line-dark.svg">

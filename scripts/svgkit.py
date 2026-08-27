@@ -4,32 +4,36 @@ generated asset in assets/ must use. The README switches images via
 <picture><source media="(prefers-color-scheme: ...)"> so every chart needs
 a real dark AND light render — this is the one place that pairing lives,
 so nothing drifts to a different look than the rest.
+
+Theme: ASCII terminal, dark background, red accent, Courier monospace.
+Because every script pulls its palette/font from here instead of hardcoding
+values, this file is the single place a full re-theme happens.
 """
 
-FONT_MONO = "'JetBrains Mono','SFMono-Regular',Consolas,monospace"
+FONT_MONO = "'Courier New', Courier, monospace"
 
 PALETTES = {
     "dark": dict(
-        bg="#0D1117",
-        panel="#161B22",
-        border="#30363D",
-        grid="#30363D",
+        bg="#0A0A0A",
+        panel="#141414",
+        border="#14213D",
+        grid="#14213D",
         accent="#3B82F6",
-        accent_dim="#1E40AF",
+        accent_dim="#1E3A8A",
         accent_light="#93C5FD",
-        text="#F0F6FC",
-        subtext="#8B949E",
+        text="#F5F5F5",
+        subtext="#999999",
     ),
     "light": dict(
         bg="#FFFFFF",
-        panel="#F6F8FA",
-        border="#D0D7DE",
-        grid="#D0D7DE",
-        accent="#3B82F6",
-        accent_dim="#1E40AF",
-        accent_light="#93C5FD",
-        text="#1F2328",
-        subtext="#57606A",
+        panel="#FAFAFA",
+        border="#D6E4F5",
+        grid="#D6E4F5",
+        accent="#1D4ED8",
+        accent_dim="#1E3A8A",
+        accent_light="#60A5FA",
+        text="#1A1A1A",
+        subtext="#666666",
     ),
 }
 
@@ -40,21 +44,42 @@ def svg_open(w, h, p):
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
         f'viewBox="0 0 {w} {h}" font-family="{FONT_MONO}">'
+        f"<defs>"
+        f'<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">'
+        f'<feGaussianBlur stdDeviation="2.2" result="blur"/>'
+        f'<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>'
+        f"</filter>"
+        f"</defs>"
         f'<rect width="{w}" height="{h}" fill="{p["bg"]}"/>'
     )
 
 
-def panel(x, y, w, h, p, radius=12):
-    return (
+def panel(x, y, w, h, p, radius=0):
+    """The terminal-window-styled card every chart sits inside: a flat,
+    sharp-cornered panel with a thin accent top edge and ASCII-style corner
+    ticks, both purely decorative (drawn over the existing rect bounds) so
+    no caller has to change its content coordinates to use this. Sharp
+    corners and no glow/blur — a real terminal emulator doesn't bloom."""
+    parts = [
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{radius}" '
-        f'fill="{p["panel"]}" stroke="{p["border"]}" stroke-width="1"/>'
-    )
+        f'fill="{p["panel"]}" stroke="{p["border"]}" stroke-width="1"/>',
+        f'<path d="M {x + radius} {y} L {x + w - radius} {y}" '
+        f'stroke="{p["accent"]}" stroke-width="2" stroke-linecap="butt" opacity="0.85"/>',
+    ]
+    tick = 8
+    for cx, cy, dx, dy in ((x, y, 1, 1), (x + w, y, -1, 1), (x, y + h, 1, -1), (x + w, y + h, -1, -1)):
+        parts.append(
+            f'<path d="M {cx + dx * 2} {cy + dy * tick} L {cx + dx * 2} {cy + dy * 2} L {cx + dx * tick} {cy + dy * 2}" '
+            f'fill="none" stroke="{p["accent"]}" stroke-width="1.5" opacity="0.55"/>'
+        )
+    return "".join(parts)
 
 
-def text(x, y, s, p, size=12, anchor="start", color=None, weight=None):
+def text(x, y, s, p, size=12, anchor="start", color=None, weight=None, glow=False):
     fill = color or p["text"]
     fw = f' font-weight="{weight}"' if weight else ""
-    return f'<text x="{x}" y="{y}" text-anchor="{anchor}" fill="{fill}" font-size="{size}"{fw}>{s}</text>'
+    fl = ' filter="url(#glow)"' if glow else ""
+    return f'<text x="{x}" y="{y}" text-anchor="{anchor}" fill="{fill}" font-size="{size}"{fw}{fl}>{s}</text>'
 
 
 def wrap_label(label, max_chars=18, max_lines=2):

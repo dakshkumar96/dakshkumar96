@@ -13,7 +13,7 @@ def load_projects():
         return json.load(f)
 
 
-WRAP_WIDTH = 52  # chars; tuned so a line never exceeds the 420px card at font-size 12
+WRAP_WIDTH = 48  # chars; tuned for Courier New (wider per-char than the old font) at font-size 12
 MAX_LINES = 6     # hard ceiling so one very long description can't run off the card
 LINE_HEIGHT = 18
 DESC_TOP = 92
