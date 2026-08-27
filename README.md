@@ -13,10 +13,6 @@
 
 ## `~/` about me 
 
-```console
-$ cat about.txt
-```
-
 Final-year Computer Science student at Royal Holloway, University of London. I build data products and AI
 systems that get used, not just demoed, usually starting from a problem I've actually run into myself.
 
