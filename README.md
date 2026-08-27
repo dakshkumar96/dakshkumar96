@@ -67,8 +67,6 @@ systems that get used, not just demoed, usually starting from a problem I've act
 
 ## `~/` skill-radar
 
-<sub>self-rated vs. what I actually ship</sub>
-
 <table>
 <tr>
 <td width="50%" align="center">
@@ -77,7 +75,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
   <img src="assets/radar-dark.svg" width="100%" alt="self-rated skill radar">
 </picture>
-<br/><sub>self-rated</sub>
+<br/><h2>How I See Myself</h2>
 </td>
 <td width="50%" align="center">
 <picture>
@@ -85,7 +83,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
   <img src="assets/radar-langs-dark.svg" width="100%" alt="language radar from real repos">
 </picture>
-<br/><sub>from real bytes in my repos</sub>
+<br/><h2>What I actually ship</h2>
 </td>
 </tr>
 </table>
