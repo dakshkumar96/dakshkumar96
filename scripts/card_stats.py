@@ -15,14 +15,17 @@ gh_api.profile_views for the caveats on that number).
 import svgkit
 from gh_api import all_repos, profile_views, public_commits
 
-SCALE = 1.25 * 0.7
-TILE_W = round(176 * SCALE)
-TILE_H = round(100 * SCALE)
-GAP = round(16 * SCALE)
-OUTER_PAD = round(12 * SCALE)
-VALUE_SIZE = round(26 * SCALE)
-LABEL_SIZE = round(12 * SCALE)
+CANVAS_W = 760  # matches commit_line.py's canvas exactly, so the two
+                # images in the Activity section share one edge-to-edge
+                # width instead of each rendering at its own native size —
+                # same discipline the featured-work cards use (all width=420)
 COLS = 4
+GAP = 14
+OUTER_PAD = 13
+TILE_W = (CANVAS_W - 2 * OUTER_PAD - (COLS - 1) * GAP) // COLS
+TILE_H = 88
+VALUE_SIZE = 23
+LABEL_SIZE = 11
 
 TILES = [
     ("commits", "Total Commits", lambda v: f"{v:,}"),

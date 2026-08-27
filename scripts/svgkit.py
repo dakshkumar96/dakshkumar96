@@ -54,25 +54,14 @@ def svg_open(w, h, p):
     )
 
 
-def panel(x, y, w, h, p, radius=0):
-    """The terminal-window-styled card every chart sits inside: a flat,
-    sharp-cornered panel with a thin accent top edge and ASCII-style corner
-    ticks, both purely decorative (drawn over the existing rect bounds) so
-    no caller has to change its content coordinates to use this. Sharp
-    corners and no glow/blur — a real terminal emulator doesn't bloom."""
-    parts = [
+def panel(x, y, w, h, p, radius=12):
+    """The rounded card every chart sits inside, drawn over the existing
+    rect bounds so no caller has to change its content coordinates to
+    use this."""
+    return (
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{radius}" '
-        f'fill="{p["panel"]}" stroke="{p["border"]}" stroke-width="1"/>',
-        f'<path d="M {x + radius} {y} L {x + w - radius} {y}" '
-        f'stroke="{p["accent"]}" stroke-width="2" stroke-linecap="butt" opacity="0.85"/>',
-    ]
-    tick = 8
-    for cx, cy, dx, dy in ((x, y, 1, 1), (x + w, y, -1, 1), (x, y + h, 1, -1), (x + w, y + h, -1, -1)):
-        parts.append(
-            f'<path d="M {cx + dx * 2} {cy + dy * tick} L {cx + dx * 2} {cy + dy * 2} L {cx + dx * tick} {cy + dy * 2}" '
-            f'fill="none" stroke="{p["accent"]}" stroke-width="1.5" opacity="0.55"/>'
-        )
-    return "".join(parts)
+        f'fill="{p["panel"]}" stroke="{p["border"]}" stroke-width="1"/>'
+    )
 
 
 def text(x, y, s, p, size=12, anchor="start", color=None, weight=None, glow=False):

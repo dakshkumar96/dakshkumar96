@@ -103,11 +103,22 @@ def build(p, series):
         title = f"week of {series[i]['date']}: {commits} commit{'s' if commits != 1 else ''}"
         svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{p["accent"]}" stroke="{p["panel"]}" stroke-width="1"><title>{title}</title></circle>')
 
-    # peak annotation, drawn directly on the chart rather than only in the caption
+    # peak annotation, drawn directly on the chart rather than only in the
+    # caption. A sharp peak's own line passes close behind wherever this
+    # label sits (both the rising and falling segment converge right at
+    # the peak point), so a background halo keeps it legible regardless —
+    # more robust than trying to out-guess where a steep line will cross.
     if any(values):
         peak_x, peak_y = pts[max_idx]
         label_y = peak_y - 12 if peak_y - 12 > pad_t + 4 else peak_y + 18
-        svg.append(svgkit.text(peak_x, label_y, f"peak {max_v}", p, size=10, anchor="middle", color=p["accent"], weight="700"))
+        label_text = f"peak {max_v}"
+        label_w = len(label_text) * 10 * 0.65 + 10
+        label_cx = max(pad_l + label_w / 2, min(peak_x, w - pad_r - label_w / 2))
+        svg.append(
+            f'<rect x="{label_cx - label_w / 2:.1f}" y="{label_y - 11:.1f}" width="{label_w:.1f}" height="15" '
+            f'rx="3" fill="{p["panel"]}" opacity="0.9"/>'
+        )
+        svg.append(svgkit.text(label_cx, label_y, label_text, p, size=10, anchor="middle", color=p["accent"], weight="700"))
 
     label_idxs = sorted(set([0, n // 4, n // 2, (3 * n) // 4, n - 1]))
     for i in label_idxs:

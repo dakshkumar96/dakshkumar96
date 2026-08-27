@@ -25,8 +25,14 @@ def wrapped_description(project):
 
 def build_card(project, p, height):
     w = 420
-    svg = [svgkit.svg_open(w, height, p), svgkit.panel(6, 6, w - 12, height - 12, p)]
-    svg.append(f'<rect x="6" y="6" width="6" height="{height - 12}" rx="3" fill="{p["accent"]}"/>')
+    panel_radius = 12
+    svg = [svgkit.svg_open(w, height, p), svgkit.panel(6, 6, w - 12, height - 12, p, radius=panel_radius)]
+    # colored left accent bar, inset top/bottom so it clears the panel's
+    # rounded corners instead of a straight edge butting into a curve
+    svg.append(
+        f'<rect x="10" y="{6 + panel_radius}" width="4" height="{height - 12 - 2 * panel_radius}" '
+        f'rx="2" fill="{p["accent"]}"/>'
+    )
     svg.append(svgkit.text(30, 40, project["name"], p, size=18, weight="700"))
     svg.append(svgkit.text(30, 62, project["stack"], p, size=11, color=p["accent"]))
     for i, line in enumerate(wrapped_description(project)):

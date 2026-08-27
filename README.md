@@ -2,7 +2,7 @@
 
 # Hi, I'm Daksh
 
-<br/><br/>
+<br/>
 
 <a href="https://linkedin.com/in/dakshkumar96"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
 <a href="mailto:dakshkumar2k2@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
@@ -157,15 +157,13 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/commit-line-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/commit-line-light.svg">
-  <img src="assets/commit-line-dark.svg" alt="commit activity over time">
+  <img src="assets/commit-line-dark.svg" width="760" alt="commit activity over time">
 </picture>
 
 <br/>
 
-<div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
-  <img src="assets/card-stats-dark.svg" alt="commits, stars, streak, repos, lines of code, days with a commit">
+  <img src="assets/card-stats-dark.svg" width="760" alt="total commits, public repos, days with a commit, profile views">
 </picture>
-</div>
