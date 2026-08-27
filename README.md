@@ -70,7 +70,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 <table>
 <tr>
 <td width="50%" align="center">
-  <br/><h2>How I See Myself</h2>
+  <h2>How I See Myself</h2>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
@@ -79,7 +79,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 
 </td>
 <td width="50%" align="center">
-  <br/><h2>What I actually ship</h2>
+  <h2>What I actually ship</h2>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">

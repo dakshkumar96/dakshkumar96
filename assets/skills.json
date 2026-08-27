@@ -3,7 +3,7 @@
   "SQL": 80,
   "Statistics / Survival Analysis": 75,
   "LLM / RAG": 78,
-  "FastAPI / Backend": 72,
-  "Next.js / React": 65,
-  "Power BI": 45
+  "FastAPI / Backend": 60,
+  "Next.js / React": 55,
+  "Power BI": 60
 }
