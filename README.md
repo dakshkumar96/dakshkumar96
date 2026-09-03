@@ -79,7 +79,7 @@ systems that get used, not just demoed, usually starting from a problem I've act
 
 </td>
 <td width="50%" align="center">
-  <b>What I actually ship</b><br/>
+  <b>What I Actually Ship</b><br/>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
