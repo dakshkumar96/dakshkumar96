@@ -26,8 +26,6 @@ systems that get used, not just demoed, usually starting from a problem I've act
   companion for the Bhagavad Gita
 - Recently: co-authored **[rv-ml](https://github.com/George-Pulickan/rv-ml)**, applying conformal prediction
   to exoplanet orbital estimation, submitted to AAAI
-- Final year project: Value at Risk, classical vs ML approaches to financial risk, backtested on real market data
-
 ## `~/` toolbox
 ###
 
