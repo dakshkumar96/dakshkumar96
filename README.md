@@ -18,7 +18,7 @@
 ## `~/` about me 
 
 Final-year Computer Science student at Royal Holloway, University of London. I build data products and AI
-systems that get used, not just demoed, usually starting from a problem I've actually run into myself.
+systems that get used, usually starting from a problem I've actually run into myself.
 
 - Currently building **[Threshold](https://github.com/dakshkumar96/Threshold)**: UK visa sponsor analysis,
   matching live job postings to Skilled Worker sponsors and ranking them by licence stability
