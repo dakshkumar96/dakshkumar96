@@ -61,15 +61,51 @@ jobs:
           python scripts/project_cards.py
 
       - name: Commit generated assets back to main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_USER: dakshkumar96
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/
-          git diff --cached --quiet || git commit -m "chore: regenerate profile assets [skip ci]"
-          # concurrency: above serializes runs so this should always be a
-          # fast-forward, but rebase-and-retry once anyway in case a human
-          # push landed on main in the moment between checkout and here
-          git push || (git pull --rebase origin main && git push)
+
+          # concurrency: above serializes runs, but a human push can still
+          # land on main in the moment between this run's checkout and its
+          # push here. A plain rebase-and-retry (the previous version of
+          # this step) only handles a clean fast-forward — it fails outright
+          # on an actual content conflict between two regenerations of the
+          # same generated file (confirmed happening: run 35910532048,
+          # 2026-09-23, conflicted on card-stats/commit-line SVGs and gave
+          # up). These files are 100% machine-generated from live data with
+          # no hand-authored content to preserve, so there's nothing to
+          # "merge" — on conflict, the correct fix is to discard the stale
+          # regeneration and regenerate fresh against whatever just landed,
+          # not resolve a diff between two snapshots of a live number.
+          for attempt in 1 2 3; do
+            git add assets/
+            if git diff --cached --quiet; then
+              echo "nothing to commit"
+              exit 0
+            fi
+            git commit -m "chore: regenerate profile assets [skip ci]"
+            if git push; then
+              exit 0
+            fi
+
+            echo "push rejected (attempt $attempt/3) -- resyncing to origin/main and regenerating fresh"
+            git reset --hard HEAD~1
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/hero.py
+            python scripts/radar.py
+            python scripts/radar_langs.py
+            python scripts/commit_line.py
+            python scripts/card_stats.py
+            python scripts/numbers.py
+            python scripts/project_cards.py
+          done
+
+          echo "::error::could not push generated assets after 3 attempts"
+          exit 1
 
       - name: Publish snake animation to output branch
         uses: crazy-max/ghaction-github-pages@v4
