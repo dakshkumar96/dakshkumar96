@@ -11,7 +11,7 @@ CURVE = 0.4  # < 1 compresses large values so one dominant language doesn't
              # collapse the polygon into a single spike
 
 
-def top_languages(n=7):
+def top_languages(n=5):
     totals = language_bytes()
     total_bytes = sum(totals.values()) or 1
     pct = {k: v / total_bytes * 100 for k, v in totals.items()}
