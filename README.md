@@ -47,11 +47,11 @@ I build AI systems for problems I've lived through, so the next person doesn't h
   <img src="https://skillicons.dev/icons?i=mysql" height="40" alt="mysql logo"  />
   <img width="12" />
   <img width="12" />
-  <img src="https://www.readmecodegen.com/api/social-icon?name=fastapi&size=96" alt="fastapi" />
+  <img src="https://www.readmecodegen.com/api/social-icon?name=fastapi&size=40" alt="fastapi" />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
   <img width="12" />
-  <img src="https://www.readmecodegen.com/api/social-icon?name=docker&size=96" alt="docker" />
+  <img src="https://www.readmecodegen.com/api/social-icon?name=docker&size=40" alt="docker" />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-line-wordmark.svg" height="40" alt="amazonwebservices logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css logo"  />
