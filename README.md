@@ -17,15 +17,20 @@
 
 ## `~/` about me 
 
-Final-year Computer Science student at Royal Holloway, University of London. I build data products and AI
-systems that get used, usually starting from a problem I've actually run into myself.
+Final-year Computer Science student at Royal Holloway, University of London, building products
+that started from something I actually ran into myself.
 
-- Currently building **[Threshold](https://github.com/dakshkumar96/Threshold)**: UK visa sponsor analysis,
-  matching live job postings to Skilled Worker sponsors and ranking them by licence stability
-- Also building **[Sakha](https://github.com/dakshkumar96/Sakha)**, a citation-grounded, voice-first
-  companion for the Bhagavad Gita
-- Recently: co-authored **[rv-ml](https://github.com/George-Pulickan/rv-ml)**, applying conformal prediction
-  to exoplanet orbital estimation, submitted to AAAI
+
+I build AI systems for problems I've lived through, so the next person doesn't have to figure it out alone.
+
+
+- Currently building [Threshold](https://github.com/dakshkumar96/Threshold): UK visa sponsor analysis,
+  matching live job postings to Skilled Worker sponsors and ranking them by licence stability, built
+  after struggling to find this information myself as an international student
+- Built [Sakha](https://github.com/dakshkumar96/Sakha), a citation-grounded, voice-first RAG companion
+  for the Bhagavad Gita
+- Co-authored [rv-ml](https://github.com/George-Pulickan/rv-ml), using conformal prediction to put
+  real uncertainty bounds on exoplanet orbital estimation, submitted to AAAI 2027
 ## `~/` toolbox
 ###
 
