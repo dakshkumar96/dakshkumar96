@@ -1,9 +1,9 @@
 {
-  "Python": 82,
-  "SQL": 80,
-  "Statistics / Survival Analysis": 75,
-  "LLM / RAG": 78,
-  "FastAPI / Backend": 60,
-  "Next.js / React": 55,
-  "Power BI": 60
+  "Python": 88,
+  "SQL": 85,
+  "TypeScript": 75,
+  "Jupyter Notebook": 70,
+  "Java": 65,
+  "Dockerfile": 62,
+  "Shell": 58
 }
