@@ -113,7 +113,7 @@ I build AI systems for problems I've lived through, so the next person doesn't h
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-sakha-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/card-sakha-light.svg">
-  <img src="assets/card-sakha-dark.svg" width="100%" alt="Sakha (Krishna AI)">
+  <img src="assets/card-sakha-dark.svg" width="100%" alt="Sakha">
 </picture>
 </a>
 </td>
@@ -129,11 +129,11 @@ I build AI systems for problems I've lived through, so the next person doesn't h
 </a>
 </td>
 <td width="50%">
-<a href="https://github.com/dakshkumar96/Reclaim">
+<a href="https://github.com/dakshkumar96/Sentinel">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-reclaim-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-reclaim-light.svg">
-  <img src="assets/card-reclaim-dark.svg" width="100%" alt="Reclaim">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-sentinel-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-sentinel-light.svg">
+  <img src="assets/card-sentinel-dark.svg" width="100%" alt="Sentinel">
 </picture>
 </a>
 </td>

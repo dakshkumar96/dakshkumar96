@@ -3,29 +3,29 @@
     "slug": "rv-ml",
     "name": "rv-ml",
     "stack": "Python · Conformal Prediction · Simulation-Based ML",
-    "description": "Predicting Keplerian orbital parameters from radial-velocity time series, with conformal prediction intervals calibrated on synthetic data that stay valid on real stars. Co-authored UROP work, submitted to AAAI.",
+    "description": "Estimates exoplanet orbital parameters from radial-velocity data in milliseconds instead of the hours Bayesian methods take, with conformal prediction for calibrated uncertainty. Trained on synthetic data with real NASA telescope noise. Co-authored, submitted to AAAI 2027.",
     "link": "https://github.com/George-Pulickan/rv-ml"
   },
   {
     "slug": "sakha",
-    "name": "Sakha (Krishna AI)",
+    "name": "Sakha",
     "stack": "Python · FastAPI · FAISS · Next.js · Gemini",
-    "description": "A voice-first companion grounded in the Bhagavad Gita, with citation-only verses, a teach-gate before any scripture, and crisis-language detection routing straight to real helplines.",
+    "description": "Voice-first RAG companion for the Bhagavad Gita. Every answer is citation-grounded against the source text, a teach-gate stops scripture from being served without context, and a crisis-language classifier routes distress signals to real helplines instead of a generic response.",
     "link": "https://github.com/dakshkumar96/Sakha"
   },
   {
     "slug": "threshold",
     "name": "Threshold",
     "stack": "Python · FastAPI · Next.js · Clerk",
-    "description": "UK visa sponsor analysis: matches live job postings to Skilled Worker sponsors and ranks them by licence stability, verified against government register data.",
+    "description": "Matches international students to UK employers that sponsor Skilled Worker visas, verified against the government sponsor register, not scraped guesses. Built after I couldn't find this myself as an international student. Live, iterating on match precision.",
     "link": "https://github.com/dakshkumar96/Threshold"
   },
   {
-    "slug": "reclaim",
-    "name": "Reclaim",
-    "stack": "React · Flask · PostgreSQL",
-    "description": "Habit-tracking web app with gamified challenges and streak tracking, a JWT-authenticated Flask API behind a React frontend.",
-    "link": "https://github.com/dakshkumar96/Reclaim",
-    "live": "https://reclaim-taupe.vercel.app"
+    "slug": "sentinel",
+    "name": "Sentinel",
+    "stack": "Next.js · TypeScript · Claude API",
+    "description": "Agentic ad-ops dashboard, built in two hours at the Cursor Adtech Hackathon. An agent plans and executes campaign actions through tool calls, with every action logged so a human can see exactly what it did and why before it happens again.",
+    "link": "https://github.com/dakshkumar96/Sentinel",
+    "live": "https://sentinel-kohl-ten.vercel.app"
   }
 ]
