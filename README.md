@@ -85,12 +85,14 @@ I build AI systems for problems I've lived through, so the next person doesn't h
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/radar-langs-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
-  <img src="assets/radar-langs-dark.svg" width="100%" alt="language radar from real repos">
+  <img src="assets/radar-langs-dark.svg" width="100%" alt="what I actually ship, measured from real repos">
 </picture>
 
 </td>
 </tr>
 </table>
+
+<sub>same six axes on both. left is self-rated. right is measured — byte share for languages, a scan of every repo's actual dependency files and Dockerfiles for the rest. not the same six numbers twice.</sub>
 
 <br/>
 
