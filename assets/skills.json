@@ -1,8 +1,7 @@
 {
+  "TypeScript": 75,
   "Python": 88,
-  "SQL / Data": 70,
-  "TypeScript / JS": 78,
-  "PyTorch / ML": 60,
-  "RAG / LLMs": 85,
-  "Docker / Deploy": 75
+  "JavaScript": 72,
+  "CSS": 58,
+  "Jupyter Notebook": 70
 }

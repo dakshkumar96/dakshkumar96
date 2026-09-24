@@ -27,12 +27,7 @@ def polygon_points(cx, cy, r, values, max_value):
     return pts
 
 
-def draw(cx, cy, r, labels, values, p, value_labels=None, color=None):
-    # color overrides the polygon's accent for just this chart (grid/text
-    # stay on the shared theme) — used to give the self-rated vs. shipped
-    # pair a gold/blue distinction without touching the site's actual
-    # accent color, which every other chart still uses unchanged.
-    accent = color or p["accent"]
+def draw(cx, cy, r, labels, values, p, value_labels=None):
     n = len(labels)
     parts = []
 
@@ -50,9 +45,9 @@ def draw(cx, cy, r, labels, values, p, value_labels=None, color=None):
     max_v = max(values) if values else 1
     pts = polygon_points(cx, cy, r, values, max_v)
     d = "M " + " L ".join(f"{x:.1f},{y:.1f}" for x, y in pts) + " Z"
-    parts.append(f'<path d="{d}" fill="{accent}" fill-opacity="0.18" stroke="{accent}" stroke-width="2" filter="url(#glow)"/>')
+    parts.append(f'<path d="{d}" fill="{p["accent"]}" fill-opacity="0.18" stroke="{p["accent"]}" stroke-width="2" filter="url(#glow)"/>')
     for x, y in pts:
-        parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="{accent}" stroke="{p["panel"]}" stroke-width="1"/>')
+        parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="{p["accent"]}" stroke="{p["panel"]}" stroke-width="1"/>')
 
     for i, label in enumerate(labels):
         angle = -math.pi / 2 + i * (2 * math.pi / n)
@@ -73,14 +68,11 @@ def draw(cx, cy, r, labels, values, p, value_labels=None, color=None):
     return "".join(parts)
 
 
-GOLD = "#D4A853"  # this chart's own accent — see draw()'s color param
-
-
 def build(p):
     skills = load_skills()
     w, h = 572, 418  # 520 * 1.1, 380 * 1.1
     svg = [svgkit.svg_open(w, h, p), svgkit.panel(11, 11, w - 22, h - 22, p)]
-    svg.append(draw(w / 2, h / 2 + 7, RADIUS, list(skills.keys()), list(skills.values()), p, color=GOLD))
+    svg.append(draw(w / 2, h / 2 + 7, RADIUS, list(skills.keys()), list(skills.values()), p))
     svg.append(svgkit.SVG_CLOSE)
     return "".join(svg)
 
