@@ -3,7 +3,7 @@
     "slug": "rv-ml",
     "name": "rv-ml",
     "stack": "Python · Conformal Prediction · Simulation-Based ML",
-    "description": "Estimates exoplanet orbital parameters from radial-velocity data in milliseconds instead of the hours Bayesian methods take, with conformal prediction for calibrated uncertainty. Trained on synthetic data with real NASA telescope noise. Co-authored, submitted to AAAI 2027.",
+    "description": "Estimates exoplanet orbital parameters from radial-velocity data in milliseconds instead of the hours Bayesian methods take, with conformal prediction for calibrated uncertainty. Trained on synthetic data with real NASA telescope noise. Co-authored research.",
     "link": "https://github.com/George-Pulickan/rv-ml"
   },
   {
