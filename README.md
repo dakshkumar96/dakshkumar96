@@ -31,7 +31,7 @@ I build AI systems for problems I've lived through, so the next person doesn't h
 - Built [Sakha](https://github.com/dakshkumar96/Sakha), a citation-grounded, voice-first RAG companion
   for the Bhagavad Gita
 - Co-authored [rv-ml](https://github.com/George-Pulickan/rv-ml), using conformal prediction to put
-  real uncertainty bounds on exoplanet orbital estimation, submitted to AAAI 2027
+  real uncertainty bounds on exoplanet orbital estimation
 ## `~/` toolbox
 ###
 
